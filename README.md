@@ -1,53 +1,5 @@
 # Multimodal Neuropsychiatry
 
-**Mode**
-
-**Key pointsAlt+1Deep researchAlt+2**
-
-[**Access the best AI models**](https://readray.ai/pricing)
-
-**Free model**
-
-**Free model0 credits**
-
-**Advanced models**
-
-**Gemini 2.5 FlashGemini 3.8 FlashGemini 4 ArgonGemini 3.1 ProClaude Haiku 5.5Claude Sonnet 5GPT 6.1 Sol**
-
-**Flagship · Smartest, but the most expensive**
-
-**Claude Fable 5Claude Opus 5.5GPT 6 Astra**
-
-**ReadrayFormerly LilysAIRead like geniusAlt+R**
-
-**Mode**
-
-**Key pointsAlt+1Deep researchAlt+2**
-
-[**Access the best AI models**](https://readray.ai/pricing)
-
-**Free model**
-
-**Free model0 credits**
-
-**Advanced models**
-
-**Gemini 2.5 FlashGemini 3.8 FlashGemini 4 ArgonGemini 3.1 ProClaude Haiku 5.5Claude Sonnet 5GPT 6.1 Sol**
-
-**Flagship · Smartest, but the most expensive**
-
-**Claude Fable 5Claude Opus 5.5GPT 6 Astra**
-
-**ReadrayFormerly LilysAIRead like geniusAlt+R**
-
-### Investigating Brain Connectivity and Clinical Symptom Dimensions in Depression and Bipolar Disorder
-
-**Research Area:** Computational Neuroscience · Neuroimaging · Clinical AI · Multimodal Machine Learning
-
-**Project Status:** Research Development / Dataset Exploration
-
----
-
 ## 1. Overview
 
 This project investigates the relationship between brain structure, functional connectivity and clinical symptom dimensions in individuals with Major Depressive Disorder (MDD) and Bipolar Disorder (BD).
