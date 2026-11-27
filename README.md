@@ -1,123 +1,97 @@
-# Functional Connectivity in Psychiatric Disorders
-### A Reproducible Computational Neuroimaging Study
+# Persistent Homology of Resting-State Functional Connectivity
 
----
+### Predicting Mood-Symptom Dimensions in Major Depression and Bipolar Disorder
+
+**Dataset:** OpenNeuro ds005237 – Transdiagnostic Connectome Project (TCP)
+
+**Project period:** September – December 2026
 
 ## Overview
 
-This project investigates resting-state functional connectivity in psychiatric disorders using functional magnetic resonance imaging (fMRI).
+This research investigates whether topological features of resting-state functional brain connectivity can provide additional information about depressive and manic symptom severity in individuals with Major Depressive Disorder (MDD) and Bipolar Disorder.
 
-The study aims to examine differences in functional brain organisation between individuals with depression, bipolar disorder and healthy comparison participants. Using neuroimaging, statistical analysis and computational methods, the research explores patterns of interregional brain connectivity and their potential associations with clinical characteristics.
-
-The project uses publicly available neuroimaging data from the Transdiagnostic Connectome Project hosted on OpenNeuro.
-
-## Research Question
-
-**Do resting-state functional connectivity patterns differ between individuals with depression, bipolar disorder and healthy comparison participants?**
+Using functional MRI (fMRI), functional connectivity analysis and Topological Data Analysis (TDA), the project aims to compare persistent homology features against conventional brain-network measures.
 
 ## Research Objectives
 
-- Characterise resting-state functional brain activity using BOLD time series.
-- Estimate functional connectivity between predefined brain regions.
-- Investigate group-level differences in functional connectivity.
-- Examine network organisation using graph-theoretical measures.
-- Explore associations between connectivity features and clinical characteristics.
-- Evaluate the potential of machine learning for identifying group-level connectivity patterns.
+- Investigate resting-state functional connectivity across clinical and healthy comparison populations.
+- Extract topological features using persistent homology.
+- Characterise connected components (H0) and loops (H1).
+- Examine relationships between brain-network topology and mood-symptom dimensions.
+- Evaluate whether persistent homology improves prediction beyond conventional graph and minimum-spanning-tree measures.
 
 ## Dataset
 
-| Attribute | Description |
-|---|---|
-| Dataset | Transdiagnostic Connectome Project |
-| Repository | OpenNeuro |
-| Dataset identifier | ds005237 |
-| Imaging modalities | Structural MRI and functional MRI |
-| Primary imaging data | Resting-state fMRI |
-| Study population | Psychiatric and healthy comparison participants |
+**OpenNeuro: ds005237 – Transdiagnostic Connectome Project**
 
-**Data source:** [OpenNeuro – ds005237](https://openneuro.org/datasets/ds005237)
+The dataset includes structural MRI, resting-state fMRI, task fMRI, clinical assessments, demographic information and behavioural measures.
+
+The analysis will investigate:
+- Major Depressive Disorder
+- Bipolar Disorder
+- Healthy comparison participants
+
+The final sample size will be determined following participant-level data auditing, clinical data verification and MRI quality control.
 
 ## Methodology
 
-The research follows a structured computational workflow:
+1. Dataset discovery and participant-level audit
+2. MRI preprocessing using fMRIPrep
+3. Motion correction and quality control
+4. Brain parcellation using Schaefer-100
+5. Functional connectivity estimation
+6. Persistent homology (H0 and H1)
+7. Graph-theoretical and minimum-spanning-tree analysis
+8. Predictive modelling and statistical validation
+9. Robustness analysis and interpretation
 
-1. **Data validation:** Dataset inspection, participant identification and imaging quality assessment.
-2. **Clinical characterisation:** Demographic analysis, diagnostic group identification and clinical variable exploration.
-3. **Structural imaging:** Anatomical image inspection and structural feature extraction.
-4. **Functional imaging:** BOLD signal extraction, quality control and functional connectivity estimation.
-5. **Network analysis:** Examination of connectivity patterns and graph-theoretical properties.
-6. **Statistical modelling:** Group comparisons, effect-size estimation and association analysis.
-7. **Machine learning:** Exploratory predictive modelling with appropriate validation and interpretation.
+## Novel Research Application
 
-## Computational Environment
+The central contribution is to investigate the **incremental predictive value of persistent homology** for depressive and manic symptom dimensions in a transdiagnostic mood-disorder population.
 
-| Area | Tools |
-|---|---|
-| Programming | Python |
-| Neuroimaging | NiBabel, Nilearn |
-| Data processing | NumPy, Pandas |
-| Statistical analysis | SciPy, Statsmodels |
-| Machine learning | Scikit-learn |
-| Visualisation | Matplotlib, Seaborn |
-| Development | Jupyter Notebook, Git, GitHub |
+Rather than simply applying topological methods to brain connectivity, this research will test whether they capture information beyond conventional network measures.
 
-## Repository Structure
+Primary outcomes:
+- MADRS – depressive symptom severity
+- YMRS – manic symptom severity
 
-```text
-functional-connectivity/
-│
-├── data/
-│   ├── raw/
-│   ├── clinical/
-│   └── processed/
-│
-├── notebooks/
-│   ├── 01_dataset_validation.ipynb
-│   ├── 02_clinical_analysis.ipynb
-│   ├── 03_structural_mri.ipynb
-│   ├── 04_functional_connectivity.ipynb
-│   ├── 05_multimodal_analysis.ipynb
-│   ├── 06_statistical_ml_analysis.ipynb
-│   └── 07_research_results.ipynb
-│
-├── figures/
-├── results/
-├── manuscript/
-├── requirements.txt
-└── README.md
-```
+Subject to availability and completeness in the dataset.
 
-## Research Outputs
+## Technologies
 
-The planned outputs include:
+- Python
+- PyCharm
+- NumPy and Pandas
+- Nilearn
+- NiBabel
+- fMRIPrep
+- Scikit-learn
+- Ripser
+- Matplotlib
+- SciPy
 
-- Quality-controlled neuroimaging data.
-- Regional BOLD time-series measurements.
-- Functional connectivity matrices.
-- Brain network representations.
-- Statistical comparisons across diagnostic groups.
-- Reproducible analytical workflows.
-- A scientific manuscript for peer-reviewed publication.
+## Project Status
 
-These outputs are planned research deliverables; conclusions will be based on the completed analyses.
+**Current phase:** Dataset auditing and research pipeline development.
 
-## Reproducibility and Data Ethics
+Pilot analyses have explored MRI quality control, regional time-series extraction, functional connectivity and preliminary persistent homology.
 
-The project prioritises transparent analytical procedures, documented preprocessing decisions, reproducible computational workflows and appropriate statistical validation.
+Group-level analysis, preprocessing validation and clinical integration remain in progress.
 
-All data handling will follow the dataset's access conditions, licensing requirements and applicable research ethics principles. Raw participant-level imaging data will not be redistributed through this repository.
+## Expected Outcomes
 
-## Researcher
+- Participant-level MRI and clinical data inventory
+- Functional connectivity matrices
+- Persistent homology feature representations
+- Conventional network feature comparisons
+- Predictive modelling results
+- Reproducible research pipeline
+- Scientific manuscript
 
-**Archana Prajapati**
+## Reproducibility and Data
 
-MSc Data Science | BSc Physics
-
-Research interests: Computational Neuroscience, Neuroimaging, Functional Connectivity, Biomedical AI and Trustworthy Machine Learning.
-
-- GitHub: [archanaben21](https://github.com/archanaben21)
-- ORCID: [0009-0001-8353-7166](https://orcid.org/0009-0001-8353-7166)
+Analysis code and derived research outputs will be organised for reproducibility. Raw participant-level imaging data will not be redistributed through this repository. Dataset access and citation will follow OpenNeuro and TCP requirements.
 
 ---
 
-*Research in progress | November 2026*
+**Research focus:** Computational Neuroscience | Functional Connectivity | Topological Data Analysis | Persistent Homology | Trustworthy Machine Learning
