@@ -1,97 +1,107 @@
-# Persistent Homology of Resting-State Functional Connectivity
+# Topological Characterisation of Resting-State Functional Brain Connectivity Using Persistent Homology
 
-### Predicting Mood-Symptom Dimensions in Major Depression and Bipolar Disorder
-
-**Dataset:** OpenNeuro ds005237 – Transdiagnostic Connectome Project (TCP)
-
-**Project period:** September – December 2026
+**Research Area:** Computational Neuroscience | Neuroimaging | Topological Data Analysis
 
 ## Overview
 
-This research investigates whether topological features of resting-state functional brain connectivity can provide additional information about depressive and manic symptom severity in individuals with Major Depressive Disorder (MDD) and Bipolar Disorder.
+This project investigates the topological organisation of resting-state functional brain connectivity using Topological Data Analysis (TDA).
 
-Using functional MRI (fMRI), functional connectivity analysis and Topological Data Analysis (TDA), the project aims to compare persistent homology features against conventional brain-network measures.
+Persistent Homology and Vietoris–Rips filtration are applied to functional connectivity representations to examine H0 and H1 topological features across filtration scales.
 
 ## Research Objectives
 
-- Investigate resting-state functional connectivity across clinical and healthy comparison populations.
-- Extract topological features using persistent homology.
-- Characterise connected components (H0) and loops (H1).
-- Examine relationships between brain-network topology and mood-symptom dimensions.
-- Evaluate whether persistent homology improves prediction beyond conventional graph and minimum-spanning-tree measures.
+- Construct functional connectivity matrices from rs-fMRI.
+- Apply chord-distance transformation.
+- Perform Vietoris–Rips filtration.
+- Extract H0 and H1 persistence features.
+- Investigate filtration-threshold sensitivity.
+- Characterise functional networks using graph theory.
+- Develop a reproducible computational workflow.
 
 ## Dataset
 
-**OpenNeuro: ds005237 – Transdiagnostic Connectome Project**
-
-The dataset includes structural MRI, resting-state fMRI, task fMRI, clinical assessments, demographic information and behavioural measures.
-
-The analysis will investigate:
-- Major Depressive Disorder
-- Bipolar Disorder
-- Healthy comparison participants
-
-The final sample size will be determined following participant-level data auditing, clinical data verification and MRI quality control.
+- **Source:** [OpenNeuro](https://openneuro.org/datasets/ds005237/versions/1.1.3)
+- **Accession:** ds005237
+- **Version:** 1.1.3
+- **Modality:** Resting-state fMRI
+- **Atlas:** Schaefer 2018
+- **Analysed pilot regions:** 74
 
 ## Methodology
 
-1. Dataset discovery and participant-level audit
-2. MRI preprocessing using fMRIPrep
-3. Motion correction and quality control
-4. Brain parcellation using Schaefer-100
-5. Functional connectivity estimation
-6. Persistent homology (H0 and H1)
-7. Graph-theoretical and minimum-spanning-tree analysis
-8. Predictive modelling and statistical validation
-9. Robustness analysis and interpretation
+1. Dataset inspection and validation
+2. fMRI signal preparation
+3. Regional time-series extraction
+4. Pearson functional connectivity
+5. Chord-distance construction
+6. Vietoris–Rips persistent homology
+7. H0/H1 feature extraction
+8. Filtration-threshold sensitivity analysis
+9. Graph-theoretical characterisation
+10. Visualisation and scientific interpretation
 
-## Novel Research Application
+## Pilot Results
 
-The central contribution is to investigate the **incremental predictive value of persistent homology** for depressive and manic symptom dimensions in a transdiagnostic mood-disorder population.
+| Metric | Result |
+|---|---:|
+| fMRI volumes | 488 |
+| Extracted regions | 97 |
+| Valid connectivity regions | 74 |
+| Connectivity matrix | 74 × 74 |
+| H0 features | 74 |
+| H1 features | 18 |
 
-Rather than simply applying topological methods to brain connectivity, this research will test whether they capture information beyond conventional network measures.
-
-Primary outcomes:
-- MADRS – depressive symptom severity
-- YMRS – manic symptom severity
-
-Subject to availability and completeness in the dataset.
+*Results represent a single-participant pilot analysis, not population-level or clinical findings.*
 
 ## Technologies
 
-- Python
-- PyCharm
-- NumPy and Pandas
-- Nilearn
-- NiBabel
-- fMRIPrep
-- Scikit-learn
-- Ripser
-- Matplotlib
-- SciPy
+Python · NumPy · Pandas · SciPy · NiBabel · Nilearn · Ripser · Matplotlib · Seaborn
 
-## Project Status
+## Repository Structure
 
-**Current phase:** Dataset auditing and research pipeline development.
+```text
+neuroscience_project/
+│
+├── scripts/
+│   ├── 01_dataset_audit.py
+│   ├── 02_validate_downloads.py
+│   ├── 03_inspect_bold_data.py
+│   ├── 04_preprocess_fmri.py
+│   ├── 05_extract_timeseries.py
+│   ├── 06_inspect_connectivity.py
+│   ├── 07_functional_connectivity.py
+│   ├── 08_persistent_homology.py
+│   ├── 09_extract_topological_features.py
+│   └── 10_visualise_and_export_results.py
+│
+├── results/
+│   ├── dataset_audit/
+│   ├── distance_matrix.npy
+│   ├── persistence_H0.npy
+│   ├── persistence_H1.npy
+│   ├── topological_features.csv
+│   ├── milestone8_threshold_sensitivity.csv
+│   ├── milestone9_network_metrics.csv
+│   └── milestone9_persistence_summary.csv
+│
+├── figures/
+│   ├── functional_connectivity_matrix.png
+│   ├── persistence_diagram_H0.png
+│   ├── persistence_diagram_H1.png
+│   └── network_visualisation.png
+│
+├── docs/
+│   └── methodology.md
+│
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── scientific_report.md
+└── reproducibility_manifest.json
+```
 
-Pilot analyses have explored MRI quality control, regional time-series extraction, functional connectivity and preliminary persistent homology.
+## Limitations and Future Work
 
-Group-level analysis, preprocessing validation and clinical integration remain in progress.
+The current analysis is preliminary and based on one participant. Further work will address preprocessing quality, motion correction, nuisance regression, topological stability and multi-participant validation.
 
-## Expected Outcomes
-
-- Participant-level MRI and clinical data inventory
-- Functional connectivity matrices
-- Persistent homology feature representations
-- Conventional network feature comparisons
-- Predictive modelling results
-- Reproducible research pipeline
-- Scientific manuscript
-
-## Reproducibility and Data
-
-Analysis code and derived research outputs will be organised for reproducibility. Raw participant-level imaging data will not be redistributed through this repository. Dataset access and citation will follow OpenNeuro and TCP requirements.
-
----
-
-**Research focus:** Computational Neuroscience | Functional Connectivity | Topological Data Analysis | Persistent Homology | Trustworthy Machine Learning
+Future investigations will explore the relationship between functional network topology and affective disorders.
